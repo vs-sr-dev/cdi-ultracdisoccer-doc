@@ -35,7 +35,7 @@ copy.
 | [notes/graphics-inventory.md](notes/graphics-inventory.md) | Every bitmap and palette, with geometry and pixel range |
 | [notes/team-database.md](notes/team-database.md) | All 75 squads, every player, flags and ratings |
 | [notes/string-inventory.md](notes/string-inventory.md) | Every legible string in the executable, grouped |
-| [notes/cdi-platform-notes.md](notes/cdi-platform-notes.md) | **Platform checklist** — what to look for on *any* CD-i disc, written for the next title |
+| [cdi-platformnotes-doc](https://github.com/vs-sr-dev/cdi-platformnotes-doc) | **Platform checklist** — what to look for on *any* CD-i disc. Shared by every CD-i pipeline; this repo no longer keeps a copy |
 
 ## Highlights
 
@@ -168,15 +168,19 @@ is git-ignored.
 
 ## Working on another CD-i disc?
 
-[notes/cdi-platform-notes.md](notes/cdi-platform-notes.md) is a checklist
-distilled out of this one: sector and Green Book layouts, the scrambler test for
-the pre-file-system region, OS-9 module validation, how to find a bitmap's width
-(and why 512 will catch you out), the ADPCM sound-group layout, real-time file
-demuxing, and the order of work that turned out to pay best. Six of the ten
-tools here are platform-general and should run unmodified.
+The checklist that started here now lives in
+[**cdi-platformnotes-doc**](https://github.com/vs-sr-dev/cdi-platformnotes-doc), shared
+by every CD-i pipeline rather than forked into each: sector and Green Book
+layouts, the scrambler test for the pre-file-system region, OS-9 module
+validation, how to find a bitmap's width (and why 512 will catch you out), the
+ADPCM sound-group layout, real-time file demuxing, and the order of work that
+pays best. Six of the ten tools here are platform-general and should run
+unmodified.
 
-It also records this disc's numbers as a baseline, so you can tell what is
-normal for CD-i from what your title is doing differently.
+It records this disc's numbers as one of three baselines, so you can tell what
+is normal for CD-i from what your title is doing differently. Companion
+pipelines: [cdi-origami-doc](https://github.com/vs-sr-dev/cdi-origami-doc) and
+[cdi-linkthefacesofevil-doc](https://github.com/vs-sr-dev/cdi-linkthefacesofevil-doc).
 
 ## Scope
 
