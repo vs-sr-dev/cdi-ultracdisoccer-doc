@@ -1,0 +1,10 @@
+_work/
+__pycache__/
+*.pyc
+*.chd
+*.bin
+*.cue
+*.png
+*.wav
+*.mpg
+*.pcm
