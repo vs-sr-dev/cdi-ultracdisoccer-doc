@@ -1,0 +1,163 @@
+# Ultra CD-i Soccer -- sha1 of every file in the CD-i volume.
+# 144 records: sha1, the size the directory declares, the path.
+#
+# Produced by cdi-laserlords-doc/tools/sixdiscs.py write, which
+# generates all six CD-i lists from the six images in one pass.
+# Each file is read by sector through its directory record, with
+# every sector sized by its own Form bit.
+#
+# CAVEAT, and it matters: a real-time file is hashed over the
+# size the DIRECTORY declares, and on Form 2 that size is
+# sectors x 2048 while the sectors hold 2,324 bytes each. The
+# declared size is a fiction, understating the payload by
+# 13.48 %, so these records do not cover the whole of any
+# real-time file. That is a limit of the file-level instrument
+# rather than of this list, and it is what
+# cdi-laserlords-doc/docs/13-against-the-collection.md is about:
+# on this platform the unit of sharing is the stream and the
+# pre-file-system region, neither of which a list of file
+# hashes can see.
+05db9b74a84bd47d3b3b421717035ae222cbf3a2  216  /PATH_TBL
+23fc9530df93aa9577ed6d0244d75e0df696a751  286  /abstract
+ecb16642a1a54b3d1a292b96cee16b87c1064986  329  /biblio
+f5928571f315ad5c7dc54c64b291d5a3882fa2d1  38  /copyright
+73087dd37565016d6f943d2fef4e54c3bf798acf  122880  /nodv_gfx
+27671ecd41a166650941b9a9114a3f6a955d767d  768  /nodv_pal
+f5faf4cd76f2a3f617f053063d9be6874125078f  71680  /intro_gfx
+925e32af45b9565b32c55d1523f88e984226090f  768  /intro_pal
+ac1f0d41f6bd5b3d26f80c30a4583f4acac90a45  192  /introb_pal
+d87e5fb1096a9d6761d5bafdd7f5573b0ad74d0a  192  /introf_pal
+ad1620357ba1889f06e9444b20b1f21247b0d24e  71680  /ip_gfx
+2142782a72a58a2a811e046e580e4301bfc7ae64  384  /eng_introb_pal
+7827d7ab4a2e2f304379e341005faa2692c76530  92160  /eng_introb_gfx
+69a1237fe569b77e4c11adcb67501a17f9be7941  71680  /eng_introf_gfx
+67f397e19ebe4f981a26f4b39a1f46e1431b4d6a  122880  /eng_tscreen_gfx
+8ab75a11928ebcde8db4a00e44b1a3c999b1e768  192  /ger_intro_pal
+ad1620357ba1889f06e9444b20b1f21247b0d24e  71680  /ger_introb_gfx
+ad1620357ba1889f06e9444b20b1f21247b0d24e  71680  /ger_introf_gfx
+532bd696d1502ae404b283da0daef808cde6c4d9  46080  /ger_knockout_gfx
+ad1620357ba1889f06e9444b20b1f21247b0d24e  71680  /ger_tscreen_gfx
+ad1620357ba1889f06e9444b20b1f21247b0d24e  71680  /ger_tselect_gfx
+f4b5d650a6306b89d5f0a24ed4a64522bc849da6  192  /fra_intro_pal
+ad1620357ba1889f06e9444b20b1f21247b0d24e  71680  /fra_introb_gfx
+ad1620357ba1889f06e9444b20b1f21247b0d24e  71680  /fra_introf_gfx
+532bd696d1502ae404b283da0daef808cde6c4d9  46080  /fra_knockout_gfx
+ad1620357ba1889f06e9444b20b1f21247b0d24e  71680  /fra_tscreen_gfx
+ad1620357ba1889f06e9444b20b1f21247b0d24e  71680  /fra_tselect_gfx
+e1f8053b10abe2de7a469b30f7155b4d451a0aa8  192  /spa_intro_pal
+ad1620357ba1889f06e9444b20b1f21247b0d24e  71680  /spa_introb_gfx
+ad1620357ba1889f06e9444b20b1f21247b0d24e  71680  /spa_introf_gfx
+532bd696d1502ae404b283da0daef808cde6c4d9  46080  /spa_knockout_gfx
+ad1620357ba1889f06e9444b20b1f21247b0d24e  71680  /spa_tscreen_gfx
+ad1620357ba1889f06e9444b20b1f21247b0d24e  71680  /spa_tselect_gfx
+002df079a5f97ccc7704fb27a92f4f2f3019fe99  92160  /andrea_gfx
+bc51789bbf48f67a1e1c7fd9a491d3f5d1878951  768  /andrea_pal
+ea1d0481448d988b82f612e58ea86980dce558d3  256  /pointer_sprts
+fa51a17bc5b5eb6ca65bfd2d16ffacdf44a8784a  229376  /CMDS/cdi_demo
+1f606c87d68db3fc2b126db0d6f3644568a85b4b  4079616  /RTF/intro_anim
+ad241104d5c863bd3fa292935721dc968be61316  2358  /SAMPLES/curs_move_sfx
+d15306e88606a1775ca9c1687c514e2290fcba56  2358  /SAMPLES/curs_select_sfx
+ec54b5632dda73de25c4f3b301f50eaedf3a4dda  11574  /SAMPLES/foul_sfx
+4a92698fb396d848c340e5229e439d92071525c9  2358  /SAMPLES/kick_sfx
+5be7a651c468426f11f4d3f283ba7c415ea3cf63  2358  /SAMPLES/hitpost_sfx
+55350c5e99db8e5e691a905cef85857b0741f740  4662  /SAMPLES/whistle_short_sfx
+9d468094f7423e7e0e0ed63d28f3eed02438318e  23564  /SAMPLES/goalcheer_sfx
+27a8800207e2ad95c9a9324fda413f7ae431454e  16652  /SAMPLES/nearmiss1_sfx
+4db18c3888949c4356b7d2a2ae45caa50176f097  23564  /SAMPLES/nearmiss2_sfx
+9a6858caa81fecd55b3ac969bd9620a609cfd603  32310  /SAMPLES/whistle_long_sfx
+ed933eeab19af30bf0d6f1d92ca7955563467fe0  2358  /SAMPLES/error2_sfx
+533a28a1a9c67d10af1af76c7ee590b579aa4d8c  4662  /SAMPLES/error1_sfx
+9e6f7954d4b85696d1a066852c8fcaf914822180  8192  /PERM_GFX/loading_pic
+afa68fe9bab5ff98fc194a91b1eaded33f73256a  384  /PERM_GFX/loading_pic_pal
+925e32af45b9565b32c55d1523f88e984226090f  768  /PERM_GFX/eng_intro_pal
+03cd85489feb9d909b37d09442d2391b1f568291  384  /PERM_GFX/mypointa_pal
+88e48f2908d4af247174abf6cd7d683fbece6732  192  /PERM_GFX/colours_pal
+e1bcaf25cf1997b3dbbae535eddccb9b698aeaa7  768  /PERM_GFX/mypointa
+2addc2fc242ae4dcd7a4aa1c718375de2a666e13  8896  /PERM_GFX/msfont_sprts
+84760a5b2ed5894dca702113bca0260c541d9d32  8896  /PERM_GFX/mtfont_sprts
+048ec901be6ed0cbdd1559bf9c037974f81869b8  23296  /PERM_GFX/propfont
+53dc6ad49cc711ad4312d79c345bcac3fc37109b  46080  /PERM_GFX/o16x16fnt_sprts
+3b8d9ec0380f3be001e5dd312d7e48cc4ef5e649  768  /INTRO_GFX/credback_pal
+95929e8061d3042e6422ceccdcf8aeb306f0799d  768  /INTRO_GFX/krislogo_pal
+5c14bd7a0d81fc3e70b88dcba3f5e53ce9c028b2  768  /INTRO_GFX/philbump_pal
+38f76778ec0a86b461af3e6290d3659096ff607a  768  /INTRO_GFX/logo_pal
+ab1f503626cc78f562d8f1561bc956f716c59e5b  92160  /INTRO_GFX/credback
+4c1c911b7b8f84d9a342ed590d92b781385e9059  1696  /INTRO_GFX/press2_gfx
+aecff4f22e6a8955dc0fc6fb463dfaa00df2a065  92160  /INTRO_GFX/philbump
+07665fe6af8076e5919d7f94cdcc8b7bf554aa27  92160  /INTRO_GFX/logo_gfx
+deabffd496c050d3835a7831d484c5c97d5ddb48  92160  /INTRO_GFX/krislogo
+2cdcef2cb07b748d14a5d1db184e501f776f06fa  107520  /INTRO_GFX/credback280
+3b8d9ec0380f3be001e5dd312d7e48cc4ef5e649  768  /INTRO_GFX/credback280_pal
+0e4569e898dd59b920c46045b949b96a107c2fdc  384  /TSELECT_GFX/tselect_pal
+03cd85489feb9d909b37d09442d2391b1f568291  384  /TSELECT_GFX/tglass_pal
+89214c9572334240c1dc969222fd8f05b55de3ff  92160  /TSELECT_GFX/eng_tselect_gfx
+21a2f79ed143fda583489b839e62426334116fa7  46754  /TSELECT_GFX/eng_tglass_gfx
+0730c7f261a632faee056367a37c2a67c4788d56  92160  /TOURN_GFX/ballback
+542eea58810005270ca0f03a780cd190f3c19cb1  5632  /TOURN_GFX/kitg1_gfx
+80c389ac276c598eadb6e1f9870cb1eeff25850f  5632  /TOURN_GFX/kitg2_gfx
+4dc3c49d1f85ceaff3a56b6ff7710753f65e0189  5632  /TOURN_GFX/kitg3_gfx
+9ca0bdd399fa2a40652cc00f5361e3bba7f6a047  5632  /TOURN_GFX/kitg4_gfx
+02e137e425dd2894b43ac50e502f33cbb826175c  5632  /TOURN_GFX/kitg5_gfx
+fd72282d8f6726a6df94ea5e42648875290ebb31  5632  /TOURN_GFX/kitg6_gfx
+51db2bfc4f8973110a7fa7ce57ccf103de6d317b  5632  /TOURN_GFX/kitg7_gfx
+bb75248d5e9c3134c898ff0b06b663b9dd590aaa  5632  /TOURN_GFX/kitg8_gfx
+69ffbdb461dabb50c18fd2f880a05108fd70e7be  5632  /TOURN_GFX/kitg9_gfx
+b5c0d9aa158202232c5fcbb69736e6f466ed7b98  5632  /TOURN_GFX/kitg10_gfx
+7c334a4eb529d97d45d45099ee9ffa80396ac58b  5632  /TOURN_GFX/kittick_gfx
+091033019c70457c34f7e935abae25e270ba0c99  48000  /TOURN_GFX/eng_knockout_gfx
+d6a758b7ef55c7109bfd04af494149fb35d74a8b  384  /TOURN_GFX/knockout_pal
+bf69b223b8cf76225dffa41474836298149d4fb5  768  /TOURN_GFX/opt_baks_pal
+fe4216eb2a6b823489e1002952a3f2e0211b9171  192  /TOURN_GFX/tmsplng_pal
+3ddc8715b014c82239543989bd65827fcb245535  768  /TOURN_GFX/ballback_pal
+5e78cc9fd9c78d20807b1ce43c37d4c43e9242ad  192  /TOURN_GFX/options_pal
+5a02277e9c6e8e4ecfa628f2ba387b0bce403c0b  368640  /TOURN_GFX/opt_baks
+611266788f26e59fb72b87e790f6d8acbad768f5  92160  /PLAYER_SPRTS/goalie_sprts
+7a5a2dfe263a2a5da4d56f758d2c6543d5dbd32b  53248  /PLAYER_SPRTS/kit1_sprts
+17c521387624583a0460160b9d5f603e5a0a26de  53248  /PLAYER_SPRTS/kit2_sprts
+eda61d03969c347ae7b85785aac77890f1de7a40  53248  /PLAYER_SPRTS/kit3_sprts
+68f19fbb1ff0f3b9f5c79a6323ab86669e118fa0  53248  /PLAYER_SPRTS/kit4_sprts
+1e8fb74529adac19262a519662d571d4ce0a2f13  53248  /PLAYER_SPRTS/kit5_sprts
+ab31313be7bfeb8d0cee79891e7bf1f1adb0e283  53248  /PLAYER_SPRTS/kit6_sprts
+488b201a283df0ba925a967aeb510f3914a46026  53248  /PLAYER_SPRTS/kit7_sprts
+b8db23bf45e0e70b8067dbb0fa5834d4e96faf7e  53248  /PLAYER_SPRTS/kit8_sprts
+8bc75f7644fa7e269fc0e83cd8fc17f10a063580  53248  /PLAYER_SPRTS/kit9_sprts
+46351a0ce4f4fc6ba12e4a2fea265a63a45938d5  53248  /PLAYER_SPRTS/kit10_sprts
+7bfa92551cf3dcc6a4b23fe1e0e6a53030cb2ac1  192  /PITCH_GFX/tacti_pal
+36fa67fd8699cc8ae1a6a633763cbb3eabc2e8be  384  /PITCH_GFX/tactiback_pal
+9ea5cf9d5a7690b2ef0e5cffeb99ba1012f6289f  192  /PITCH_GFX/pitch_pal
+304eb57242fc2cf1bb940f1a184d7e8b91f37ca5  384  /PITCH_GFX/pitchtop_pal
+c06a4792d751300f652b448e8f74882e46eeb08a  16640  /PITCH_GFX/t4font_sprts
+5d0cc6a81c3f3322745d899abfc28bf3de15be7d  3264  /PITCH_GFX/numbers
+c80632e306bc189556a4d3eea08aa36947072f65  256  /PITCH_GFX/ball_sprts
+66925e524ff5a279cf7736e04ee1b93e9109f216  512  /PITCH_GFX/flags_sprts
+1eebe1aabceaf6f5194d3012ac7eae65ca84045b  2048  /PITCH_GFX/tgoal
+9962096a213a5cf978df1121df04ee0490585431  2048  /PITCH_GFX/bgoal
+8e049f6c6b8ce3eb2160feaff3d49d38f0516537  64  /PITCH_GFX/shadow_sprts
+3f4f529f891c8c1be672123cd15bcf5e77d40559  2176  /PITCH_GFX/lcd_sprts
+7db8d957006292c601a71838d08d34218b368a63  2304  /PITCH_GFX/refereer_gfx
+91c451e1fdc0717e27a3af319967752991a5c307  2304  /PITCH_GFX/refereey_gfx
+e8df574d11998d8a39a7025101ea985fbcf983ed  2080  /PITCH_GFX/t4wide_pitch
+86ac2dc332cd23bac78db36ac816d02dd7d0974f  393216  /PITCH_GFX/nmlpitch
+86ac2dc332cd23bac78db36ac816d02dd7d0974f  393216  /PITCH_GFX/drypitch
+c04e76bb16d958ed0ea06c1cb573876f48638a9e  393216  /PITCH_GFX/mudpitch
+ce32e12658895841a8493d2a94a22f8ce525d368  393216  /PITCH_GFX/icepitch
+58863d094a113447ecba2317c99e50f3863b1e8a  393216  /PITCH_GFX/wetpitch
+8dfd1152896ffa54912a4cae9b1f43f5130c82c3  384  /PITCH_GFX/drypitch_pal
+9fbd186237853a85b1757b39e4b84c1c61314446  384  /PITCH_GFX/nmlpitch_pal
+add7b160a4390fb14a16a37e8c4e7558e4d2e55d  384  /PITCH_GFX/mudpitch_pal
+fef197c2200b4a258f015622ea731c4739752041  384  /PITCH_GFX/icepitch_pal
+35c3ec263d0a5b32bc660d937412a560d2eb120f  384  /PITCH_GFX/wetpitch_pal
+f59f2d0f04e3e46139e12a007325fc1083f36444  92160  /SCOREBOARD_GFX/scorbord_gfx
+526f1f15b9f5de37a11525a9fee380a0e49c26da  384  /SCOREBOARD_GFX/scorbord_pal
+9350d5230db06e7250e5b8b0cf320ffdab57afad  92160  /SAD_GFX/sadback_gfx
+24847db95bda685a478e3a05e3fbd43f58c721b0  192  /SAD_GFX/sad_pal
+293807fd8e8a898e2bf34280567912867be2df81  384  /SAD_GFX/sad2_pal
+0f4ddf4cf7d112ad65f89482e115325e98cb2b97  57344  /SAD_GFX/sadomar1_gfx
+bfc01a6ddb602c33ff94e8069c38a17646634576  57344  /SAD_GFX/sadomar2_gfx
+6bb6225efca36d9e42e2ecc34ff40a2cb271d66b  245760  /CELEB_GFX/celeb_gfx
+993d9ae926cf05ca215dc3c3e35324cf48063375  192  /CELEB_GFX/celeb_pal
+1a976b03ce07a7b014fe8af70bd2cadfba2c46d9  25600  /CELEB_GFX/cupeuro_gfx
+e67bb170e424d623d444a6b534f2c57e239ee59b  25600  /CELEB_GFX/cuplad_gfx
+40c4646fd95e69e77a8b1f7ff241131edde6d20e  32000  /CELEB_GFX/cuplge_gfx
+43cebecbc31399ca485ac10a1315ef7dca1f2a43  384  /CELEB_GFX/cups_pal
+0742a398e1b12f26b9e7ba4476e6d636480ce8d2  384  /CELEB_GFX/philback_pal
